@@ -1,0 +1,111 @@
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('/static/proxima-nova-300.woff2');
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('/static/proxima-nova-400.woff2');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('/static/proxima-nova-600.woff2');
+  font-weight: 600;
+}
+
+$meli-logo-large: '/static/logo__large_plus@2x.png';
+$meli-logo-small: '/static/logo__small@2x.png';
+$meli-font: 'Proxima Nova', 'Helvetica Neue', Helvetica, Roboto, Arial,
+  sans-serif;
+$meli-background-color: #f5f5f5;
+$meli-font-color: #333;
+
+body {
+  margin: 0;
+  font-family: $meli-font;
+  background-color: $meli-background-color;
+  -webkit-font-smoothing: antialiased;
+
+  a {
+    color: $meli-font-color;
+    text-decoration: none;
+  }
+}
+
+.layout {
+  &-wrapper {
+    padding-bottom: 24px;
+  }
+
+  &-header {
+    background-color: #fff159;
+    box-shadow: 0 1px 0 0 rgba(253, 136, 136, 0.1);
+  }
+
+  &-nav {
+    max-width: 1200px;
+    position: relative;
+    margin: 0 auto;
+
+    &-logo {
+      background-image: url($meli-logo-large);
+      background-repeat: no-repeat;
+      background-size: 134px 34px;
+      height: 34px;
+      width: 134px;
+      display: inline-block;
+      left: 10px;
+      position: absolute;
+      top: 11px;
+    }
+
+    &-search {
+      padding: 8px 1px;
+      position: relative;
+      left: 160px;
+      max-width: 622px;
+
+      &-input {
+        font-size: 16px;
+        font-weight: 400;
+        color: #333;
+        background-color: #fff;
+        box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+        height: 39px;
+        width: 100%;
+        border-radius: 2px;
+        border: 0 rgba(0, 0, 0, 0.2);
+        margin: 0;
+        padding: 7px 60px 9px 15px;
+        box-sizing: border-box;
+        outline: none;
+      }
+
+      &-btn {
+        background-image: none;
+        height: 39px;
+        padding-top: 2px;
+        cursor: pointer;
+        outline: 0;
+        width: 30px;
+        background-color: #fff;
+        top: 8px;
+        right: 1px;
+        position: absolute;
+        padding: 0;
+        background: 0 0;
+        border: none;
+        color: #666;
+        box-sizing: border-box;
+
+        &-icon {
+          fill: #666;
+          width: 16px;
+        }
+      }
+    }
+  }
+}

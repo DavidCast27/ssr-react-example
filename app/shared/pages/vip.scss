@@ -1,0 +1,125 @@
+.item {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  color: #666;
+  padding: 24px 0;
+
+  &-breadcrumb {
+    padding-bottom: 14px;
+
+    &__path {
+      display: inline-block;
+
+      ol {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        li {
+          display: inline;
+          font-size: 14px;
+          font-weight: 400;
+          margin: 0 0 2px;
+          line-height: 1.45;
+          .chevron {
+            width: 9px;
+            height: 9px;
+            display: none;
+            padding: 0 6px;
+            opacity: 0.5;
+          }
+        }
+
+        li:not(:last-child) {
+          .chevron {
+            display: inline-block;
+          }
+        }
+      }
+    }
+  }
+
+  &-container {
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3);
+    display: flex;
+    box-sizing: border-box;
+
+    h2,
+    p {
+      margin-top: 0;
+    }
+
+    &__left {
+      flex: 1 0 33%;
+
+      &__picture {
+        max-height: 500px;
+        width: 100%;
+        border-bottom: inset #ddd 1px;
+        text-align: center;
+      }
+
+      &__description {
+        padding: 32px;
+        line-height: 1.6;
+        white-space: pre-line;
+
+        &__title {
+          color: #000;
+          margin-bottom: 32px;
+        }
+      }
+    }
+
+    &__details {
+      box-sizing: border-box;
+      flex: 1 0 5%;
+      border-left: solid #ddd 1px;
+      padding: 32px;
+
+      &__condition {
+        font-size: 14px;
+        margin-bottom: 8px;
+        color: #666;
+        font-weight: 300;
+      }
+
+      &__title {
+        margin-bottom: 7px;
+        color: #000;
+        line-height: 1.05;
+        font-size: 26px;
+      }
+
+      &__price {
+        color: #000;
+        font-size: 44px;
+        font-weight: 300;
+
+        sup {
+          font-size: 23px;
+        }
+      }
+
+      &__fs {
+        color: #39b54a;
+        font-weight: 400;
+        font-size: 16px;
+      }
+
+      &__buy {
+        margin-top: 32px;
+        padding: 12px 24px;
+        color: #fff;
+        background-color: #3483fa;
+        border-radius: 4px;
+        text-align: center;
+        font-size: 18px;
+        font-weight: 400;
+      }
+    }
+  }
+}
